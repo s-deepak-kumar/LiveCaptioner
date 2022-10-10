@@ -1,0 +1,62 @@
+body,
+html {
+    background-color: gray;
+    height: 100%;
+    font-family: 'Rubik', sans-serif;
+}
+
+#videos {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#subscriber {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+#shareableLink {
+    position: absolute;
+    bottom: 340px;
+    width: 360px;
+    left: 10px;
+    color: white;
+    z-index: 100;
+    text-shadow: 1px 1px #000000;
+}
+
+#publisher {
+    position: absolute;
+    width: 360px;
+    height: 240px;
+    bottom: 80px;
+    left: 10px;
+    z-index: 100;
+    border: 3px solid white;
+    border-radius: 3px;
+}
+
+h2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 100;
+    text-shadow: 1px 1px #000000;
+}
+
+#sideNavButton {
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    right: 0;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LiveCaptioner - Live caption for 1 to 1 video call</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div id="login-form-wrap">
+        <h2>Fill the Form!</h2>
+        <form id="login-form" method="get" action="meeting.html" style="padding: 10px;">
+            <input type="text" id="sessionId" name="sessionId" style="display: none;">
+            <p>
+                <input type="text" id="username" name="username" placeholder="Username" required><i class="validation"><span></span><span></span></i>
+            </p>
+            <p>
+                <input type="email" id="email" name="email" placeholder="Email Address" required><i class="validation"><span></span><span></span></i>
+            </p>
+            <p>
+                <input type="submit" id="submit" value="Start Meeting">
+            </p>
+        </form>
+    </div>
+    <!--login-form-wrap-->
+    <!-- partial -->
+
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        document.getElementById('sessionId').value = getParameterByName('sessionId');
+    </script>
+
+</body>
+
+</html>
